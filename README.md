@@ -8,10 +8,10 @@ Projetos feitos dos estudos de Kotlin com Compose do Curso "Android Basics with 
 <br>
 Projects:
 <div>
-  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/Screenshot_15.png" width="200px">
-  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/imagem%20(1).png" width="200px">
-  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/imagem%20(2).png" width="200px">
   <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/imagem%20(3).png" width="200px">
+  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/Screenshot_15.png" width="210px">
+  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/imagem%20(2).png" width="200px">
+  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/imagem%20(1).png" width="210px">
 </div>
 
 ## Unit 2
