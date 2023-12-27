@@ -18,3 +18,8 @@ Projects:
 - Kotlin Fundamentals
 - Add a button to an app
 - Interacting with UI and state
+<br>
+Projects:
+<div>
+  <img src="https://raw.githubusercontent.com/anacrispee/KotlinStudies/main/src/Screenshot_21.png" width="200px">
+</div>
