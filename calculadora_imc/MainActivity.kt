@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3Api::class)
+
 package com.example.calculadoraimc
 
 import android.os.Bundle
@@ -76,59 +78,66 @@ fun ImcCalculator(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(0xFF756AB6)),
+            .background(Color(0xFFEEF5FF)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            color = Color.White,
+            color = Color(0xFF176B87),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .padding(30.dp),
-            text = "IMC Calculator"
+            text = stringResource(R.string.app_title)
         )
-        TextField(
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color(0xFFFFE5E5),
-                textColor = Color(0xFF756AB6)
-            ),
-            modifier = Modifier
-                .padding(10.dp),
-            singleLine = true,
+        inputField(
+            label = R.string.weight,
             value = weightInput,
-            onValueChange = { weightInput = it },
-            label = { Text(text = "Weight") },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+            onValueChange = { weightInput =it }
         )
-        TextField(
-            colors = TextFieldDefaults.textFieldColors(containerColor = Color(0xFFFFE5E5)),
-            modifier = Modifier
-                .padding(10.dp),
-            singleLine = true,
+        inputField(
+            label = R.string.height,
             value = heightInput,
-            onValueChange = { heightInput = it },
-            label = { Text(text = "Height") },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+            onValueChange = { heightInput = it }
         )
         Button(
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFFE5E5)),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF176B87)),
             modifier = Modifier
                 .padding(10.dp),
             onClick = {
             result = calculateImc(weight, height)
         }) {
             Text(
-                color = Color(0xFF756AB6),
-                text = "Calculate"
+                color = Color(0xFFEEF5FF),
+                text = stringResource(R.string.calculate)
             )
         }
         Text(
-            color = Color.White,
+            color = Color(0xFF176B87),
             text = stringResource(resultTxt)
         )
     }
 }
+
+@Composable
+fun inputField(
+    label: Int,
+    value: String,
+    onValueChange: (String) -> Unit,
+    modifier: Modifier = Modifier,
+){
+    TextField(
+        modifier = Modifier
+            .padding(10.dp),
+        label = { Text(text = stringResource(label)) },
+        value = value,
+        onValueChange = onValueChange,
+        singleLine = true,
+        colors = TextFieldDefaults.textFieldColors(containerColor = Color(0xFFB4D4FF)),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+    )
+}
+
 
 fun calculateImc(
     weight: Double,
